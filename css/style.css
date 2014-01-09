@@ -1,0 +1,22 @@
+html {
+  background: black url(/images/dark_geometric.png) repeat;
+}
+
+body {
+  text-align: center;
+  background-color: transparent;
+  padding-top: 150px;
+}
+
+h1 {
+  color: #aaa;
+  font-size: 100px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Helvetica", "Arial", sans-serif;
+  text-shadow: 2px 2px 0 white;
+}
+
+button {
+  margin-top: 100px;
+}
