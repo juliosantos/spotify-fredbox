@@ -3,9 +3,10 @@ require([
 ], function(models) {
   'use strict';
 
-  window.popTopTrack = function () {
-    return $.getJSON( "http://fredbox.meteor.com/api/popTopTrack", null, function (response) {
-      console.log(response.name);
+  var playlistUrl;
+
+  var popTopTrack = function () {
+    return $.getJSON( playlistUrl + "/api/popTopTrack", null, function (response) {
       models.player.playTrack(models.Track.fromURI(response.href));
     });
   };
@@ -15,8 +16,9 @@ require([
     $button.click( function (event) {
       event.preventDefault();
       $button.button( "loading" );
+      playlistUrl = "http://" + $( "input" ).val() + ".meteor.com";
       popTopTrack().then( function () {
-        $button.slideUp();
+        $( "form" ).slideUp();
       });
     });
 

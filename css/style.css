@@ -18,5 +18,9 @@ h1 {
 }
 
 button {
-  margin-top: 100px;
+}
+
+input {
+  width: 300px !important;
+  margin: 100px auto 10px auto;
 }
